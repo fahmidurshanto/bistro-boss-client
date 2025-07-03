@@ -9,7 +9,7 @@ import img6 from '../../../assets/home/06.png'; // Adjust the path as necessary
 
 const Banner = () => {
   return (
-    <div className="">
+    <div className="mt-10">
 
     <Carousel
       className="carousel display-flex flex-col justify-center items-center w-full"

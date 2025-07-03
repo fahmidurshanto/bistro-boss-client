@@ -11,7 +11,7 @@ const ChefRecoms = () => {
     }, [])
     return (
         <section className='mb-12 w-2/3 mx-auto'>
-            <SectionTitle heading={"chef recommends"} subHeading={"...Should try..."}></SectionTitle>
+            <SectionTitle heading={"chef recommends"} subHeading={"...Should try..."} ></SectionTitle>
             <div className='grid md:grid-cols-3 gap-8'>
                 {
                     recoms.map((item) => <Recom key={item.id} item={item}></Recom>)

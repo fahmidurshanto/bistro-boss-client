@@ -2,3 +2,55 @@
 @plugin "daisyui";
 
 
+/* Enhanced react-tabs styles */
+.react-tabs__tab-list {
+  border-bottom: 2px solid #fbbf24; /* amber-400 */
+  margin: 0 0 20px;
+  padding: 0 10px;
+  display: flex;
+  background: #fffbe9;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+}
+.react-tabs__tab {
+  display: inline-block;
+  border: none;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  list-style: none;
+  padding: 12px 28px;
+  margin-right: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a16207; /* amber-700 */
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s, background 0.2s;
+}
+.react-tabs__tab:focus {
+  outline: none;
+  background: #fef3c7;
+}
+.react-tabs__tab--selected {
+  background: #fbbf24;
+  border-bottom: 3px solid #a16207;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 12px 0 rgba(251,191,36,0.08);
+}
+.react-tabs__tab:not(.react-tabs__tab--selected):hover {
+  background: #fef3c7;
+  color: #b45309;
+}
+/* Minimal required styles for react-tabs to show content */
+.react-tabs__tab-panel {
+  display: flex;
+}
+.react-tabs__tab-panel--selected {
+  display: block;
+  animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

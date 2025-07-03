@@ -4,7 +4,7 @@ const Review = ({ review }) => {
   console.log("Review----", review);
   const { rating, name, details } = review;
   return (
-    <div className="px-5 py-10 space-y-4">
+    <div className="px-5 py-10 flex flex-col items-center space-y-4">
       <div className="rating">
         {[1, 2, 3, 4, 5].map((star) => (
           <input
