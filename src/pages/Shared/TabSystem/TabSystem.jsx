@@ -39,6 +39,7 @@ const TabSystem = ({ tabIndex, setTabIndex, foods }) => {
           <div className="p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
             {foods
               .filter((food) => food.category === category.key)
+              .slice(0, 6)
               .map((item) => (
                 <FoodCard key={item._id} item={item} />
               ))}

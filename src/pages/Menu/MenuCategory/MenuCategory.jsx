@@ -7,7 +7,7 @@ const MenuCategory = ({ items, title, coverImg }) => {
     <div>
       {title && <Cover img={coverImg} title={title}></Cover>}
       <div className="grid md:grid-cols-2 gap-16">
-        {items.map((item) => (
+        {items.slice(0,4    ).map((item) => (
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
