@@ -1,5 +1,9 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 import FoodCard from "../FoodCard/FoodCard";
 
 const TabSystem = ({ tabIndex, setTabIndex, foods }) => {
@@ -24,9 +28,9 @@ const TabSystem = ({ tabIndex, setTabIndex, foods }) => {
             key={category.key}
             className={`
               cursor-pointer font-semibold py-3 px-6 transition-colors rounded-lg outline-none border-0
-              ${tabIndex === idx 
-                ? 'text-yellow-500 bg-white shadow-md ' 
-                : 'text-white hover:text-black bg-black hover:bg-yellow-400 '}
+              ${tabIndex === idx
+                ? "text-yellow-500 bg-white shadow-md "
+                : "text-white hover:text-black bg-black hover:bg-yellow-400 "}
             `}
           >
             {category.name}
@@ -36,13 +40,22 @@ const TabSystem = ({ tabIndex, setTabIndex, foods }) => {
 
       {categories.map((category, index) => (
         <TabPanel key={index} className="react-tabs__tab-panel">
-          <div className="p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {foods
-              .filter((food) => food.category === category.key)
-              .slice(0, 6)
-              .map((item) => (
-                <FoodCard key={item._id} item={item} />
-              ))}
+          <div className="p-4">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              pagination={{ clickable: true }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {foods
+                .filter((food) => food.category === category.key)
+                .map((item) => (
+                  <SwiperSlide key={item._id}>
+                    <FoodCard item={item} />
+                  </SwiperSlide>
+                ))}
+            </Swiper>
           </div>
         </TabPanel>
       ))}

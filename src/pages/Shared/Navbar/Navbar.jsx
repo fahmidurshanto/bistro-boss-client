@@ -24,6 +24,9 @@ const Navbar = () => {
       <li>
         <Link className="uppercase font-bold" to="/order">Order Food</Link>
       </li>
+      <li>
+        <Link className="uppercase font-bold" to="/contact">Contact Us</Link>
+      </li>
     </>
   );
 
