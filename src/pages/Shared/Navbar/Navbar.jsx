@@ -27,6 +27,9 @@ const Navbar = () => {
       <li>
         <Link className="uppercase font-bold" to="/contact">Contact Us</Link>
       </li>
+      <li>
+        <Link className="uppercase font-bold" to="/login">Login</Link>
+      </li>
     </>
   );
 

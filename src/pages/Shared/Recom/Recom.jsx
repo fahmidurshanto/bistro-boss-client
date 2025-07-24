@@ -1,5 +1,4 @@
 const Recom = ({ item }) => {
-  console.log("Chef Recommendations----", item);
   const { image, name, description } = item;
   return (
     <div>

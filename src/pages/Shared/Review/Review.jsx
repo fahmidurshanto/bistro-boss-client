@@ -1,7 +1,6 @@
 import { RiDoubleQuotesL } from "react-icons/ri";
 
 const Review = ({ review }) => {
-  console.log("Review----", review);
   const { rating, name, details } = review;
   return (
     <div className="px-5 py-10 flex flex-col items-center space-y-4">
